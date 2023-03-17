@@ -3,6 +3,7 @@ import './App.css';
 // import Dhoni from './component/Dhoni';
 // import Gorib from './component/Gorib';
 // import Moddhobitto from './component/Moddhobitto';
+import SIngleFriend from './component/SIngleFriend.js';
 
 
 
@@ -30,17 +31,17 @@ function App() {
 
   return (
 
-    <ul>
-      {
-
-        friends.map((friend)=>{
-          return <li>{friend.name} has {friend.balance}Tk, and he is living in {friend.home}</li>
-        }
-        
+    friends.map(
+      (friend)=>{
+        return(
+          <SIngleFriend
+          name = {friend.name}
+          balance = {friend.balance}
+          home = {friend.home}
+          />
         )
-
       }
-    </ul>
+    )
   
     )
 }
