@@ -9,7 +9,23 @@ import './App.css';
 
 function App() {
 
-  let friends = ["Midul", "Mehedi", "Pial", "Nayef", "Yasin"]
+  let friends = [
+    {
+      name : "Midul",
+      balance : 50,
+      home : "Narayanganj"
+    },
+    {
+      name : "Mehedi",
+      balance : 30,
+      home : "Pabna"
+    },
+    {
+      name : "Yasin",
+      balance : 20,
+      home : "Chadpur"
+    },
+  ]
 
 
   return (
@@ -17,8 +33,8 @@ function App() {
     <ul>
       {
 
-        friends.map((friendz)=>{
-          return <li>{friendz}</li>
+        friends.map((friend)=>{
+          return <li>{friend.name} has {friend.balance}Tk, and he is living in {friend.home}</li>
         }
         
         )
