@@ -1,16 +1,29 @@
  import Aman from './midul.js';
 import './App.css';
+import Dhoni from './component/Dhoni';
+import Gorib from './component/Gorib';
+import Moddhobitto from './component/Moddhobitto';
 
-let name = "Midul Hosen Kibria";
-let oldAge = 18;
 
 
 function App() {
+
+let name = "Midul Hosen Kibria";
+let balance = 20;
+
+if(balance <= 10){
+  return <Gorib/>
+}else if(balance > 11 && balance <= 20){
+ return <Moddhobitto/>
+}else{
+ return <Dhoni/>
+}
+
   return (
     <div className='container'>
-      <h1 style={{textAlign:"center",fontSize:"72px"}}>My name is {name}</h1>
-      <h1 style={{textAlign:"center",fontSize:"72px"}}>My age is {name == "Midul Hosen" ? 100 : 50}</h1>
-      <Aman name = {name} oldAge = {oldAge}></Aman>
+      
+
+       {/* {oldAge >= 18 ? <Dhoni/> : <Gorib/>} */}
     </div>
   );
 }
