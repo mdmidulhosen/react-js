@@ -1,57 +1,17 @@
- import Aman from './midul.js';
-import './App.css';
-// import Dhoni from './component/Dhoni';
-// import Gorib from './component/Gorib';
-// import Moddhobitto from './component/Moddhobitto';
-// import SIngleFriend from './component/SIngleFriend.js';
-import TheState from './component/TheState.js';
-
-
-function click(lorem, event){
-  console.log(event.target)
-}
+import React from "react";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import "./css/global.css"
 
 function App() {
   return (
-    <TheState/>
-    // <h1 style={{textAlign:"center", cursor:"pointer"}} onClick={(event)=>click('error',event)}>Click Me</h1>
-  )
-
-//   let friends = [
-//     {
-//       name : "Midul",
-//       balance : 50,
-//       home : "Narayanganj"
-//     },
-//     {
-//       name : "Mehedi",
-//       balance : 30,
-//       home : "Pabna"
-//     },
-//     {
-//       name : "Yasin",
-//       balance : 20,
-//       home : "Chadpur"
-//     },
-//   ]
-
-
-//   return (
-
-//     friends.map(
-//       (friend)=>{
-//         return(
-//           <SIngleFriend
-//           name = {friend.name}
-//           balance = {friend.balance}
-//           home = {friend.home}
-//           />
-//         )
-//       }
-//     )
-  
-//     )
+    <section className="bg-[#F7FAFC] h-screen">
+      <div className="w-[1240px] mx-auto">
+        <Header />
+        <Body />
+      </div>
+    </section>
+  );
 }
-
 
 export default App;
